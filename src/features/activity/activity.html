@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/features/activity/activity.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
+    <title>DesignQuick | Activity</title>
+</head>
+<body>
+    <div class="app-container">
+        <div class="side-panel">
+            <h3>Design<span class="emphasize">QUICK</span></h3>
+            <hr/>
+            <span class="sub-heading">ACTIVITY</span>
+            <div class="scrollable-panel">
+                <div class="card draggable-card" draggable="true" id="draggable-card-1">
+                    <input type="text" class="title" placeholder="Text Area">
+                    <textarea name="content" id="textarea"></textarea>
+                    <div class="timer">Start Time: <span class="start-time">00:00:00</span> - Stop Time: <span class="stop-time">00:00:00</span></div>
+                    <button class="start">Start</button>
+                </div>
+                <div class="card draggable-card" draggable="true" id="draggable-card-2">
+                    Check List
+                </div>
+                <div class="card draggable-card" draggable="true" id="draggable-card-3">
+                    Multiple Progress
+                </div>
+            </div>
+            <div class="navigation">
+                <a href=""><div class="back">
+                    <span class="material-symbols-outlined">arrow_back</span> Go Back</div>
+                </a>
+                <a href=""><div class="clear">
+                    Clear All <span class="material-symbols-outlined">delete_forever</span></div>
+                </a>
+            </div>
+        </div>
+        <div class="main-panel" id="main-panel">
+            <div class="main-panel-content" id="main-panel-content">
+                
+                <div class="predefined-location add-location" id="add-location-btn">
+                    <span class="material-symbols-outlined" id="add">add</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/src/features/activity/activity.js"></script>
+</body>
+</html>

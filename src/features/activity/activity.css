@@ -1,0 +1,210 @@
+@import url('/src/main/css/global.css');
+@import url('/src/main/css/colors.css');
+
+.app-container {
+    display: flex;
+    height: 100vh;
+}
+
+
+/*Side Panel*/
+.side-panel {
+    width: 25%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+}
+
+.side-panel h3 { margin-bottom: 10px; }
+
+.side-panel .sub-heading {
+    font-weight: 300;
+    letter-spacing: 3px;
+    text-align: right;
+    padding: 10px 0 20px 0;
+}
+
+.side-panel .scrollable-panel {
+    overflow-y: scroll;
+    display: grid;
+    padding: 0 10px;
+}
+
+.side-panel .scrollable-panel::-webkit-scrollbar { 
+    width: 3px !important;
+    background-color: var(--background);
+}
+
+.side-panel .scrollable-panel::-webkit-scrollbar-thumb {
+    width: 3px !important;
+    border-radius: 20px;
+    background-color: var(--accent);
+}
+
+.side-panel .scrollable-panel .card { margin-bottom: 20px; }
+
+.card {
+    width: 350px;
+    height: 350px;
+    padding: 20px;
+    text-align: center;
+    cursor: grab;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: var(--app-card);
+}
+
+.card:active { cursor: grabbing; }
+
+.card .title {
+    width: 100%;
+    text-align: center;
+    color: var(--text);
+    padding: 10px 0;
+    margin: 0 0 20px 0;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--text);
+    background-color: inherit;
+}
+
+.card .title::placeholder { color: var(--text); }
+
+.card textarea {
+    width: 100%;
+    height: 150px;
+    outline: none;
+    color: var(--text);
+    border: 1px solid var(--app-input-border);
+    background-color: var(--app-input-background);
+}
+
+.card textarea:focus-visible { border: 1px solid var(--app-input-border-focus) }
+
+.card .timer { 
+    padding: 20px 0;
+    font-size: 12px;
+}
+
+.card button {
+    width: 25%;
+    height: 45px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: 1px solid var(--accent);
+    border-radius: 5px;
+    transition: all .5s ease;
+}
+
+.card button:hover { 
+    cursor: pointer;
+    transform: translate3D(0,-1px,0) scale(1.1);
+    transition: all .4s ease;
+}
+
+.start {
+    color: var(--text);
+    background-color: var(--accent);
+}
+
+.navigation { 
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation { padding: 20px 10px; }
+
+.navigation a { width: 50%; }
+
+.navigation .back, .navigation .clear {
+    border: 1px solid var(--text);
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 0 5px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigation .clear {
+    background-color: var(--text);
+    color: var(--background);
+}
+
+.navigation a:hover .back {
+    border: 1px solid var(--accent);
+}
+
+.navigation a:hover .clear {
+    color: var(--text);
+    border: 1px solid var(--accent);
+    background-color: var(--accent);
+}
+.navigation span { font-size: 18px; }
+
+/*Main Panel*/
+.main-panel {
+    width: 75%;
+    padding: 4%;
+    position: relative;
+    overflow-x: hidden;
+    background-color: var(--app-main-panel);
+}
+
+#main-panel-content {
+    position: relative;
+    width: 100%; /* Adjust as needed */
+    height: 100%; /* Adjust as needed */
+}
+
+.predefined-location {
+    width: 350px; /* Adjust as needed */
+    height: 350px; /* Adjust as needed */
+    border: 3px dashed var(--app-borderline);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.predefined-location:hover { cursor: pointer;  }
+
+.predefined-location #remove { 
+    display: none;
+    font-size: 50px !important;
+    color: var(--app-borderline);
+}
+
+.predefined-location:hover #remove { display: block; }
+
+#close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: var(--text);
+    border: none;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+#close-btn:hover {
+    transform: translate3D(0,-1px,0) scale(1.3);
+    transition: all .4s ease;
+}
+
+.add-location span#add {
+    font-size: 50px !important;
+    color: var(--app-borderline);
+}
+
+

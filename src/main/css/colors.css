@@ -1,0 +1,16 @@
+:root {
+    --primary: #2C394B;
+    --secondary: #334756;
+    --accent: #FF4C29;
+    --line: #48505e;
+    --background: #082032;
+    --text: #f7f7f7;
+    --overlay: rgb(8, 32, 50, 0.7);
+
+    --app-main-panel: #061623;
+    --app-borderline: #278DDB;
+    --app-card: #0f3b5c;
+    --app-input-border: #124a73;
+    --app-input-border-focus: #1a6296;
+    --app-input-background: #0c314c;
+} 

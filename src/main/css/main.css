@@ -1,0 +1,99 @@
+@import url('/src/main/css/global.css');
+@import url('/src/main/css/colors.css');
+
+body {
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('/src/assets/backgrounds/grids.png');
+}
+
+body::before {
+    background-color: var(--overlay);
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .container-title { 
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+    padding: 50px 0 0 0;
+}
+
+.container .container-title p {
+    padding: 20px 0;
+}
+
+.container-title p { margin: 0; }
+
+.features-container, ul.features {
+    padding: 20px;
+    z-index: 2;
+}
+
+ul.features li.item {
+    display: inline-block;
+    margin: 20px;
+}
+
+.card {
+    background-color: var(--primary);
+    width: 350px;
+    border-bottom: 4px solid var(--accent);
+    border-radius: 20px;
+    color: var(--text);
+    box-shadow: rgba(4, 18, 28, 0.35) 0px 5px 15px;
+    transition: all .5s ease;
+}
+
+.card:hover {
+    transform: translate3D(0,-1px,0) scale(1.03);
+    box-shadow: rgba(4, 18, 28, 0.15) 0px 18px 25px 0px;
+    transition: all .4s ease;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin: 40px 0;
+}
+
+.card .card-content {
+    padding: 20px;
+    border-top: 1px solid var(--line);
+}
+
+.card .card-title {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 1000px) {
+    
+}
+
+@media only screen and (max-width: 480px) {
+
+    .container-title h1 { 
+        font-size: 2.8em !important;
+        margin-block-end: 20px;
+    }
+    
+}
